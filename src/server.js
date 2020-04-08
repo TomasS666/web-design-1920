@@ -1,16 +1,20 @@
 const express = require('express')
+const multer  = require('multer')
+const upload = multer({ dest: 'uploads/' })
+const XLSX = require("xlsx")
+const xlsxParser = require("xlsx-parse-json")
 const app = express()
+const excelToJson = require('convert-excel-to-json');
+const excel = require('excel-stream')
 const port = process.env.PORT || 9090;
-const fileUpload = require('express-fileupload');
+const fs = require("fs")
 const bodyParser = require('body-parser')
 const path = require("path")
 
 app
-    .use(fileUpload({
-      createParentPath: true
-    }))
-    .use(bodyParser.urlencoded({ extended: true }))
-    .use(bodyParser.json())
+    
+    // .use(bodyParser.urlencoded({ extended: true }))
+    // .use(bodyParser.json())
     // .use(partials())
     .set('view-engine', 'ejs')
     .set('views', path.join(__dirname,'views'))
@@ -24,28 +28,27 @@ app
       res.send("Hoi")
     })
 
-    .post('/upload', (req, res)=>{
+    .post('/upload', upload.single('schema'), (req, res)=>{
 
-      console.log(req.files)
-      try {
-        if(!req.files) {
-            res.send({
-                status: false,
-                message: 'No file uploaded'
-            });
-        } else {
-            //Use the name of the input field (i.e. "avatar") to retrieve the uploaded file
-            let schema = req.files.schema;
-            
-            //Use the mv() method to place the file in upload directory (i.e. "uploads")
-            avatar.mv('./data');
+      console.log(req.file)
+      const file = req.file
+      console.log(file.path)
 
-            //send response
-            res.send("Nice");
-        }
-    } catch (err) {
-        res.status(500).send(err);
-    }
+    // const workbook =   XLSX.readFile(file.path)
+    // var stream = XLSX.stream.to_json(workbook, {raw:true});
+    // // const pretty = JSON.stringify(workbook, null, 4)
+    //   res.json(stream)
+
+
+
+
+ 
+      const result = excelToJson({
+          sourceFile: file.path
+      });
+      res.header("Content-Type",'application/json');
+      res.send(JSON.stringify(result, null, 4))
+
     })
 
 

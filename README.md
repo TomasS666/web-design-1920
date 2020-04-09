@@ -49,7 +49,10 @@ or you can download the zip file or something similar by clicking on the green b
 
 ### Week 1
 
-#### Meeting with Larissa 
+#### Meeting with Larissa
+Our "team" met up with Larissa this week. We're gonna make an exclusive design for her. Larissa is blind. Well for the biggest part she can't see. She can still recognize some shapes. If she really wants to and focusses and the typography on a screen has huge contrast and it's super big, she can read small parts. But it's almost an impossible task and it requires a lot of energy. So she rather doesn't. 
+
+
 #### Q & A with Larissa
 #### Testing / explaining concepts
 

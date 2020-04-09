@@ -28,9 +28,10 @@ or you can download the zip file or something similar by clicking on the green b
 
 ## Features
 
-### Consider all contexts
-### Recognize user needs
-### Add bullshit
+### Study situation
+### Ignore conventions
+### Prioritize identity
+### Add nonsense
 
 
 ## Wishlist
@@ -55,6 +56,21 @@ Our "team" met up with Larissa this week. We're gonna make an exclusive design f
 
 #### Q & A with Larissa
 #### Testing / explaining concepts
+
+#### Larissa from the design principles perspective
+### Study situation
+* She's very ambitious,
+* Does top-class sport in track cycling (Olympic level), but doesn't like the sport itself too much. She loves it more because of the game, the challenge, the fanaticism and to win.
+* Studies IT at the HVA, had some delay because she's a busy with the top-class track cycling. So she has a busy life
+* Also a point of contact for accesability related topics at the HVA.
+
+### Ignore conventions
+For me to ignore conventions, it was good to have a talk with her. Because we assume things, but in reality they're more often than not false.  
+### Prioritize identity
+### Add nonsense
+
+#### Testing the NS website with a screenreader
+##### Testing accesability  
 
 ## Conclusion
 

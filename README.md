@@ -46,7 +46,12 @@ or you can download the zip file or something similar by clicking on the green b
 ## Used dependencies
 
 ## Proces
- (MIT)
+
+### Week 1
+
+#### Meeting with Larissa 
+#### Q & A with Larissa
+#### Testing / explaining concepts
 
 ## Conclusion
 

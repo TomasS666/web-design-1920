@@ -4,17 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Jaarschema</title>
+    <title>Sport schema</title>
 </head>
 <body>
     <h1 tabindex="0" aria-label="Goedemorgen Larissa! Kies op wat voor niveau je jouw sportschema wilt bekijken. Je kunt op elk moment terug naar een vorige stap met de e toets. Kies een van de volgende mogelijkheden">Goedemorgen Larissa! Kies op wat voor niveau je jouw sportschema wilt bekijken. Kies een van de volgende items</h1>
 
     <nav id="menu" role="navigation">
-        <a href="#vandaag" aria-flowto="#vandaag" aria-label="Programma vandaag">Programma vandaag</a><span>of</span>
+        <a href="#vandaag" aria-flowto="vandaag" aria-label="Programma vandaag">Programma vandaag</a><span>of</span>
         <a href="#maanden" aria-flowto="maanden" aria-label="Maandniveau">Maandniveau</a>
         <a href="#weken" aria-flowto="weken" aria-label="Weekniveau">Weekniveau</a>
    
     </nav>
+
+
+    <section id="vandaag" aria-label="vandaag" tabindex="0">
+        <table aria-hidden="true">
+            <thead>
+                <th>
+                    Vandaag
+                </th>
+                <th>Activiteit</th>
+            </thead>
+            <tbody>
+                <tr aria-hidden="false" tabindex="0">
+                    <td>Vandaag staan de volgende activiteiten op het programma:</td>
+                    <td>Intensief testen met CMD studenten</td>
+                    <td>En verder even ontspannen, er staat niets meer op het programma</td>
+                </tr>    
+            </tbody>
+        </table>
+    </section>
 
 
 <section id="maanden" aria-label="maanden" tabindex="0">

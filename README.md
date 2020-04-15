@@ -1,6 +1,6 @@
 # Web Design @cmda-minor-web · 2019-2020
 
-### Demo: {link}
+### Demo: https://tomass666.github.io/web-design-1920/
 
 ## Table of contents
   

@@ -1,4 +1,4 @@
-window.addEventListener("keypress", (e)=>{
+window.addEventListener("keydown", (e)=>{
     console.log(e.keyCode)
     if(e.keyCode == 101){
         console.log("go back")

@@ -16,8 +16,12 @@ if (window.fetch) {
 
 
 // function getJoke(){
-//   fetch()
+//   fetch('https://official-joke-api.appspot.com/random_joke')
+//     .then(data => data.json())
+//     .then(json => console.log(json))
 // }
+
+getJoke()
 
 
 function getQuote() {

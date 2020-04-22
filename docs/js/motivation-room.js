@@ -15,9 +15,13 @@ if (window.fetch) {
 // });
 
 
-// function getJoke(){
-//   fetch()
-// }
+function getJoke(){
+  return fetch('https://official-joke-api.appspot.com/random_joke')
+    .then(data => data.json())
+    .then(json => json)
+}
+
+
 
 
 function getQuote() {
@@ -34,7 +38,9 @@ function getQuote() {
       var json = JSON.parse(xhttp.responseText)
 
       // quoteHolder.innerHTML = json[0].text 
-
+      var joke = null;
+      getJoke()
+      .then(json => joke = json)
 
       const intro = `Hi there Larissa, I'm gonna switch to English a moment for your motivational quote of the day`
       const msg = `${json[0].text}`
@@ -43,7 +49,7 @@ function getQuote() {
       document.querySelector("button").addEventListener("focus", function (e) {
         if (count < 1) {
   
-          const reply = "well, that wasn't very motivational was it."
+          const reply = `well, that wasn't very motivational was it. Let me tell you a joke Larissa ${joke.setup}${joke.punchline}`
           playMessage(intro, 'en-GB')
           // playMessage.cancel()
           setTimeout(e => {

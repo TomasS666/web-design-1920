@@ -15,6 +15,11 @@ if (window.fetch) {
 // });
 
 
+// function getJoke(){
+//   fetch()
+// }
+
+
 function getQuote() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
@@ -30,10 +35,27 @@ function getQuote() {
 
       // quoteHolder.innerHTML = json[0].text 
 
+
+      const intro = `Hi there Larissa, I'm gonna switch to English a moment for your motivational quote of the day`
+      const msg = `${json[0].text}`
+
       let count = 0;
       document.querySelector("button").addEventListener("focus", function (e) {
         if (count < 1) {
-          playMessage(json[0].text, 'en-GB')
+  
+          const reply = "well, that wasn't very motivational was it."
+          playMessage(intro, 'en-GB')
+          // playMessage.cancel()
+          setTimeout(e => {
+            playMessage(msg, 'en-GB')
+            console.log("yey")
+            argue(reply, 'en-US')
+          }, 1000)
+
+          
+          
+          
+          
           count++
         }
       })
@@ -52,12 +74,28 @@ function getQuote() {
 
 
 function playMessage(message, locale) {
+
+  // window.speechSynthesis.getVoices().forEach(voice => {
+  //   console.log(voice)
+  // })
+  
   var msg = new SpeechSynthesisUtterance(message);
   msg.text = message;
   msg.volume = 1; // 0 to 1
   msg.rate = 1; // 0.1 to 9
   msg.pitch = 1; // 0 to 2, 1=normal
   msg.lang = locale; //"en-US";
+  window.speechSynthesis.speak(msg);
+}
+
+function argue(message, locale){
+  var msg = new SpeechSynthesisUtterance(message);
+  msg.text = message;
+  msg.volume = 1; // 0 to 1
+  msg.rate = 1; // 0.1 to 9
+  msg.pitch = 1; // 0 to 2, 1=normal
+  msg.lang = locale; //"en-US";
+  msg.voice = window.speechSynthesis.getVoices()[0]
   window.speechSynthesis.speak(msg);
 }
 

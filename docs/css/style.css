@@ -1,9 +1,16 @@
 body{
   background-color: #000;
   color: #808080;
+  font-size: 300%;
 }
 
+a{
+  font-size: 3rem;
+}
 
+*:focus{
+  color: #fff;
+}
 
 table {
     border-collapse: collapse;

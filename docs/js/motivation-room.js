@@ -1,3 +1,5 @@
+
+
 if (window.fetch) {
   console.log("has fetch")
 }
@@ -47,19 +49,24 @@ function getQuote() {
 
       let count = 0;
       document.querySelector("button").addEventListener("focus", function (e) {
-        if (count < 1) {
-  
-          const reply = `well, that wasn't very motivational was it. Let me tell you a joke Larissa ${joke.setup}${joke.punchline}`
-          playMessage(intro, 'en-GB')
-          // playMessage.cancel()
-          setTimeout(e => {
-            playMessage(msg, 'en-GB')
-            console.log("yey")
-            argue(reply, 'en-US')
-          }, 1000)
 
-          count++
-        }
+
+        // sing(`laaaaaaa`, "en-GB")
+        // sing(`Oh man`, "en-GB", 0.2, 10, 0)
+        // if (count < 1) {
+  
+        //   const reply = `well, that wasn't very motivational was it. Let me tell you a joke Larissa ${joke.setup}${joke.punchline}`
+        //   playMessage(intro, 'en-GB')
+        //   // playMessage.cancel()
+        //   setTimeout(e => {
+        //     playMessage(msg, 'en-GB')
+        //     console.log("yey")
+        //     argue(reply, 'en-US')
+          
+        //   }, 1000)
+
+        //   count++
+        // }
       })
 
       document.querySelector("button").addEventListener("blur", function (e) {
@@ -90,14 +97,26 @@ function playMessage(message, locale) {
   window.speechSynthesis.speak(msg);
 }
 
-  function argue(message, locale){
+  function argue(message, locale, rate = 1, pitch = 1){
     var msg = new SpeechSynthesisUtterance(message);
     msg.text = message;
     msg.volume = 1; // 0 to 1
-    msg.rate = 1; // 0.1 to 9
-    msg.pitch = 1; // 0 to 2, 1=normal
+    msg.rate = rate; // 0.1 to 9
+    msg.pitch = pitch; // 0 to 2, 1=normal
     msg.lang = locale; //"en-US";
     msg.voice = window.speechSynthesis.getVoices()[0]
+    window.speechSynthesis.speak(msg);
+  }
+
+
+  function sing(message, locale, rate = 1, pitch = 1, voice = 1){
+    var msg = new SpeechSynthesisUtterance(message);
+    msg.text = message;
+    msg.volume = 1; // 0 to 1
+    msg.rate = rate; // 0.1 to 9
+    msg.pitch = pitch; // 0 to 2, 1=normal
+    msg.lang = locale; //"en-US";
+    msg.voice = window.speechSynthesis.getVoices()[voice]
     window.speechSynthesis.speak(msg);
   }
 

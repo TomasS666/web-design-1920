@@ -1,15 +1,30 @@
 body{
   background-color: #000;
   color: #808080;
-  font-size: 300%;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a{
-  font-size: 3rem;
+  font-size: 5rem;
+  /* height: 30vh; */
+  margin: 20rem 0;
+  display: block;
+  text-align: center;
 }
 
 *:focus{
   color: #fff;
+}
+
+a{
+  color: #3e3e3e;
+  outline: none;
+}
+
+a:focus{
+  /* margin: auto 0;
+  height: 50vh; */
 }
 
 table {

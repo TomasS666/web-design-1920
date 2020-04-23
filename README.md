@@ -42,11 +42,11 @@ or you can download the zip file or something similar by clicking on the green b
 ## Future features
 
 
-## Acknowledgements
-
-## Used dependencies
-
-## Proces
+## Acknowledgements / Credits
+Ramon Meijers
+Robert Hoekstra
+Koop Reynders
+Vasillis van Gemert
 
 ### [Week 1](https://github.com/TomasS666/web-design-1920/wiki/Week-1)
 

@@ -58,10 +58,6 @@ function getQuote() {
             argue(reply, 'en-US')
           }, 1000)
 
-          
-          
-          
-          
           count++
         }
       })
@@ -94,15 +90,15 @@ function playMessage(message, locale) {
   window.speechSynthesis.speak(msg);
 }
 
-function argue(message, locale){
-  var msg = new SpeechSynthesisUtterance(message);
-  msg.text = message;
-  msg.volume = 1; // 0 to 1
-  msg.rate = 1; // 0.1 to 9
-  msg.pitch = 1; // 0 to 2, 1=normal
-  msg.lang = locale; //"en-US";
-  msg.voice = window.speechSynthesis.getVoices()[0]
-  window.speechSynthesis.speak(msg);
-}
+  function argue(message, locale){
+    var msg = new SpeechSynthesisUtterance(message);
+    msg.text = message;
+    msg.volume = 1; // 0 to 1
+    msg.rate = 1; // 0.1 to 9
+    msg.pitch = 1; // 0 to 2, 1=normal
+    msg.lang = locale; //"en-US";
+    msg.voice = window.speechSynthesis.getVoices()[0]
+    window.speechSynthesis.speak(msg);
+  }
 
 getQuote()

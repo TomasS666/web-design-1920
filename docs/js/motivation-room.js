@@ -36,7 +36,7 @@ function getQuote() {
 
       const quoteHolder = document.querySelector("h2[data-quote]")
 
-
+      
       var json = JSON.parse(xhttp.responseText)
 
       // quoteHolder.innerHTML = json[0].text 
@@ -45,7 +45,7 @@ function getQuote() {
       .then(json => joke = json)
 
       const intro = `Hi there Larissa, I'm gonna switch to English a moment for your motivational quote of the day`
-      const msg = `${json[0].text}`
+      const msg = `${json[Math.floor(Math.random() * json.length)].text}`
 
       let count = 0;
       document.querySelector("button").addEventListener("focus", function (e) {

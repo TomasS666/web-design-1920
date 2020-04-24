@@ -53,20 +53,20 @@ function getQuote() {
 
         // sing(`laaaaaaa`, "en-GB")
         // sing(`Oh man`, "en-GB", 0.2, 10, 0)
-        // if (count < 1) {
+        if (count < 1) {
   
-        //   const reply = `well, that wasn't very motivational was it. Let me tell you a joke Larissa ${joke.setup}${joke.punchline}`
-        //   playMessage(intro, 'en-GB')
-        //   // playMessage.cancel()
-        //   setTimeout(e => {
-        //     playMessage(msg, 'en-GB')
-        //     console.log("yey")
-        //     argue(reply, 'en-US')
+          const reply = `well, that wasn't very motivational was it. Let me tell you a joke Larissa ${joke.setup}${joke.punchline}`
+          playMessage(intro, 'en-GB')
+          // playMessage.cancel()
+          setTimeout(e => {
+            playMessage(msg, 'en-GB')
+            console.log("yey")
+            argue(reply, 'en-US')
           
-        //   }, 1000)
+          }, 1000)
 
-        //   count++
-        // }
+          count++
+        }
       })
 
       document.querySelector("button").addEventListener("blur", function (e) {
@@ -109,15 +109,15 @@ function playMessage(message, locale) {
   }
 
 
-  function sing(message, locale, rate = 1, pitch = 1, voice = 1){
-    var msg = new SpeechSynthesisUtterance(message);
-    msg.text = message;
-    msg.volume = 1; // 0 to 1
-    msg.rate = rate; // 0.1 to 9
-    msg.pitch = pitch; // 0 to 2, 1=normal
-    msg.lang = locale; //"en-US";
-    msg.voice = window.speechSynthesis.getVoices()[voice]
-    window.speechSynthesis.speak(msg);
-  }
+  // function sing(message, locale, rate = 1, pitch = 1, voice = 1){
+  //   var msg = new SpeechSynthesisUtterance(message);
+  //   msg.text = message;
+  //   msg.volume = 1; // 0 to 1
+  //   msg.rate = rate; // 0.1 to 9
+  //   msg.pitch = pitch; // 0 to 2, 1=normal
+  //   msg.lang = locale; //"en-US";
+  //   msg.voice = window.speechSynthesis.getVoices()[voice]
+  //   window.speechSynthesis.speak(msg);
+  // }
 
 getQuote()

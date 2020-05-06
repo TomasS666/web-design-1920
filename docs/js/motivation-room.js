@@ -55,13 +55,18 @@ function getQuote() {
         // sing(`Oh man`, "en-GB", 0.2, 10, 0)
         if (count < 1) {
   
-          const reply = `well, that wasn't very motivational was it. Let me tell you a joke Larissa ${joke.setup}${joke.punchline}`
+          const reply = `well, that wasn't very motivational was it. Let me tell you a joke Larissa... ${joke.setup}... ${joke.punchline}... if that wasn't funny, well at least I hope you're gonna have a great day. Please come back tomorrow. We'll do another attempt`
           playMessage(intro, 'en-GB')
           // playMessage.cancel()
           setTimeout(e => {
             playMessage(msg, 'en-GB')
             console.log("yey")
             argue(reply, 'en-US')
+            playMessage('well, hilarious Jack... Next time try better. You are wasting Larissa her valuable time.. ', 'en-GB')
+            argue('Okay misses know-it-all', 'en-US')
+            playMessage('Jack just stop it... Bye Larissa! Enjoy your day!', 'en-GB')
+            argue("Bye Larissa! You're doing just great, keep it up!", 'en-US')
+
           
           }, 1000)
 
